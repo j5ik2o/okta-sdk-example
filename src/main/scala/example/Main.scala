@@ -13,7 +13,7 @@ import scala.sys.env
 
 object Main extends App {
   val orgUrl = env("ORG_URL")
-  val secret = env("SECRET")
+  val secret = env("CLIENT_SECRET")
 
   val oktaClient = Clients
     .builder()
