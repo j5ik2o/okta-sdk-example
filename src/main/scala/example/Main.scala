@@ -9,10 +9,11 @@ import com.okta.sdk.resource.user._
 import org.passay._
 
 import java.util.UUID
+import scala.sys.env
 
 object Main extends App {
-  val orgUrl = "https://dev-29207360.okta.com"
-  val secret = "00gWaXg2z2QhZ8fpNOEnEw65S_JE_DjXl8VaJDOVDX"
+  val orgUrl = env("ORG_URL")
+  val secret = env("SECRET")
 
   val oktaClient = Clients
     .builder()
